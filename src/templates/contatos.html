@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+
+<body>
+  
+<h1 class="container text-center my-3 my-xl-5">Entre em contato</h1> 
+<div class="container-contatos">
+<div class="contatos">
+  <form class="container my-3 my-xl-5 d-flex flex-column justify-content-center align-items-center" method="post" action="/contatos">
+    <label class="text" for="email">Digite seu e-mail:</label><br>
+    <input type="text" id="email" name="email" required placeholder="example@gmail.com"><br>
+    <label class="text" for="assunto">Assunto:</label><br>
+    <input type="text" id="assunto" name="assunto" required><br>
+    <label class="text" for="descricao">Descrição:</label><br>
+    <textarea id="descricao" name="descricao" required></textarea><br>
+    <!-- Button trigger modal -->
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary botao-lilas" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    Enviar
+  </button>
+</div>
+<div class="contatos-tel">
+  
+  <h3 class="text-contato"><i class="fa-solid fa-phone icon"></i> Ligue para nós</h3>
+  <p class="text-contato">+55 12 3921-4039</p>
+ 
+  <h3 class="text-contato"> <i class="fa-solid fa-location-dot icon"></i> Localização</h3>
+  <p class="text-contato">Rua das orquídeas 257 - Jardim Satélite</p>
+  <p class="text-contato">São José dos Campos - SP 12249-000</p>
+ 
+  <h3 class="text-contato"> <i class="fa-solid fa-clock icon"></i> Horário comercial</h3>
+  <p class="text-contato">Seg a Sex 10h - 20h </p>
+  <p class="text-contato" > Sáb e Dom  e feriados  - Fechado</p>
+</div>
+</div>
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Tem certeza que deseja enviar?</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="submit" class="btn btn-primary botao-lilas">Enviar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Tem certeza que deseja enviar?</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="submit" class="btn btn-primary botao-lilas">Enviar</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</form>
+
+</body>
+{% endblock conteudo %}

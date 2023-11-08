@@ -1,0 +1,184 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,200&family=Barlow+Semi+Condensed:wght@600&family=Bebas+Neue&family=Kaisei+Decol&family=Nunito+Sans:opsz,wght@6..12,600;6..12,800&display=swap');
+  
+  @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,200&family=Barlow+Semi+Condensed:wght@400;600&family=Bebas+Neue&family=Kaisei+Decol&family=Nunito+Sans:opsz,wght@6..12,600;6..12,800&display=swap');
+:root{
+    --azul-escuro: #132F95;
+    --azul-claro: #1A44DF;
+}
+*{
+    font-family: Barlow Semi Condensed;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    }
+
+
+
+.motivos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+.objetivo{
+    padding: 30px;
+    border-radius: 20px;
+    background: #F5F5F5;
+}
+
+input, textarea{
+    width: 300px;
+    height: 50px;
+    border-radius: 10px;
+    border: 2px solid var(--azul-claro);
+    background: #E4E4E4;
+}
+
+
+.container-carrossel{
+    padding: 20px 120px;
+}
+.botao-lilas {
+    font-size: 24px;
+    background-color: var(--azul-escuro);
+    color: #fff; /* Define a cor do texto para garantir boa legibilidade */
+    transition: background-color 0.3s; /* Adiciona uma transição suave de cores */
+}
+.navbar {
+    border-bottom: 3px solid var(--azul-escuro);
+}
+/* Estilize os links da navegação */
+.navbar-nav .nav-link {
+    color: black; /* Define a cor padrão para preto */
+    font-weight: bold; /* Torna a fonte em negrito por padrão */
+    transition: color 0.3s; /* Adiciona uma transição suave de cor */
+}
+
+/* Altera a cor do link quando o mouse está sobre ele */
+.navbar-nav .nav-link:hover {
+    color: var(--azul-escuro); /* Altera a cor para #13957D no hover */
+}
+.card-cor{
+    width: 100%;
+    background-color: var(--azul-escuro);
+    color: #fff; /* Define a cor do texto para garantir boa legibilidade */
+    transition: background-color 0.3s; /* Adiciona uma transição suave de cores */
+}
+/* Estilize o footer */
+footer {
+    display:block;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--azul-escuro);
+    color: white; /* Define a cor do texto como branco para melhor legibilidade */
+}
+
+/* Defina uma classe personalizada para botões de envio */
+.botao-enviar {
+    background-color: var(--azul-escuro);
+    color: white; /* Defina a cor do texto como branco para melhor legibilidade */
+    transition: color 0.3s;
+
+}
+.botao-enviar:hover {
+    background-color: var(--azul-claro);
+}
+.botao-enviar:hover {
+    background-color: var(--azul-escuro);
+}
+.botao-lilas:hover {
+    background-color: var(--azul-claro);
+}
+.unidades {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .card {
+    flex: 0 0 calc(33.33% - 10px); /* Define a largura desejada e subtrai o espaçamento entre os cards */
+    margin-bottom: 20px; /* Espaçamento inferior entre os cards */
+  }
+  .container-contatos{
+    padding: 20px 130px 50px 120px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+ }
+  .contatos-tel{
+    flex: 1;
+    background-color: var(--azul-escuro);
+    position: relative;
+    padding-top: 30px;
+    align-items: center;
+    border-radius: 10px;
+    margin-top: 200px;
+    margin-left: -100px;
+    text-align: center;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+.contatos{
+    padding: 20px;
+    display: flex;
+    flex: 1;
+    fill: #F5F5F5;
+    stroke-width: 1px;
+    stroke: #BEBEBE;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 10px;
+    background: #F5F5F5;
+    
+   
+    }
+    .icon{
+        font-size: 30px;
+        
+    }
+    .text-contato{
+        color: #FFFF;
+    }
+    .text{
+        font-size: 30px;
+    }
+
+   main{
+    padding: 20px 120px;
+   }
+   
+@media(max-width: 768px) {
+    
+    .div-novidades {
+        width: 696px;
+    }
+    .motivos{
+        flex-direction: column;
+    }
+    .unidades{
+        flex-direction: column;
+    }
+    .container-carrossel{
+        padding: 20px;
+        font-size: 20px;
+    }
+    .container-contatos{
+        flex-direction:column;
+        padding: 20px;
+        gap: 20px;
+        
+      }
+      .contatos, .contatos-tel {
+        flex: 1;
+        font-size: 10px;
+    }
+    .contatos-tel{
+        margin-top: 0;
+        margin-left: 0;
+    }
+    main{
+        padding: 20px;
+       }
+}

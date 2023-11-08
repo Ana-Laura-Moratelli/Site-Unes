@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+<main>
+
+
+{% for user in userDetails %}
+
+
+    <tr>
+        <td>E-mail: {{user[0]}}</td><br>
+        <td>Assunto:{{user[1]}}</td><br>
+        <td>Descrição:{{user[2]}}</td><br>
+        <br>
+    </tr>
+
+
+{% endfor %}
+</main>
+{% endblock %}
+
+

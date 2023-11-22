@@ -1,22 +1,25 @@
 {% extends "base.html" %}
 
 {% block conteudo %}
-<main>
+ 
 
-
+<h1 class="container text-center my-3 my-xl-5">Mensagens</h1>
+<div class="container-user">
 {% for user in userDetails %}
+   
 
+     <div class="user">
 
-    <tr>
-        <td>E-mail: {{user[0]}}</td><br>
-        <td>Assunto:{{user[1]}}</td><br>
-        <td>Descrição:{{user[2]}}</td><br>
-        <br>
-    </tr>
-
+        <tr>
+            <td>E-mail: {{user[0]}}</td><br>
+            <td>Assunto:{{user[1]}}</td><br>
+            <td>Descrição:{{user[2]}}</td><br>
+            <br>
+        </tr>
+    </div>
 
 {% endfor %}
-</main>
+</div>
 {% endblock %}
 
 

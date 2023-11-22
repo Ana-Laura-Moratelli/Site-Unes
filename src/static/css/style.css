@@ -71,6 +71,7 @@ input, textarea{
 footer {
     display:block;
     position: relative;
+    align-items: end;
     bottom: 0;
     width: 100%;
     background-color: var(--azul-escuro);
@@ -144,11 +145,23 @@ footer {
     .text{
         font-size: 30px;
     }
-
-   main{
-    padding: 20px 120px;
+   .user{
+    display: flex;
+    flex-direction: row;
+    background-color: #F5F5F5;
+    padding: 20px;
+    border-radius: 20px;
+    max-width: 100%;
+    width: 400px;
    }
-   
+   .container-user{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 20px;
+    align-items: center;
+    padding-bottom: 20px;
+    
+   }
 @media(max-width: 768px) {
     
     .div-novidades {
@@ -178,7 +191,7 @@ footer {
         margin-top: 0;
         margin-left: 0;
     }
-    main{
+    .container-user{
         padding: 20px;
-       }
+    }
 }

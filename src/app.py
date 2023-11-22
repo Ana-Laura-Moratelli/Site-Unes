@@ -1,23 +1,27 @@
-from flask import Flask, request, render_template, redirect #importa a classe flask e o render template importa a pasta templates para arquivos HTML
-from flask_mysqldb import MySQL
+from flask import Flask, request, render_template, redirect
+import mysql.connector
 
-app = Flask("__name__") #cria uma instância dessa classe
-  
+app = Flask(__name__)
 
-app.config['MYSQL_HOST'] = 'localhost' 
-app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = 'sua_senha'
-app.config['MYSQL_DB'] = 'contatos'
+# Configurações do banco de dados
+db_config = {
+    'host': 'localhost',
+    'user': 'root',
+    'password': 'suasenha',
+    'database': 'contatos',
+}
 
-mysql = MySQL(app)
+# Conectar ao banco de dados
+mysql = mysql.connector.connect(**db_config)
 
-@app.route("/") # criando rotas com decorator
+# Criar um cursor para executar consultas SQL
+cursor = mysql.cursor()
 
-def home(): #função para retornar uma mensagem
+@app.route("/")
+def home():
     return render_template("index.html")
 
 @app.route("/unidades")
-
 def unidades():
     return render_template("unidades.html")
 
@@ -31,14 +35,10 @@ def pilares():
 
 @app.route('/users')
 def users():
-    cur = mysql.connection.cursor()
+    cursor.execute("SELECT * FROM contatos")
+    userDetails = cursor.fetchall()
 
-    users = cur.execute("SELECT *  FROM contatos")
-
-    if users > 0:
-        userDetails = cur.fetchall()
-
-        return render_template("users.html", userDetails=userDetails)
+    return render_template("users.html", userDetails=userDetails)
 
 @app.route('/contatos', methods=['GET', 'POST'])
 def contatos():
@@ -47,16 +47,15 @@ def contatos():
         assunto = request.form['assunto']
         descricao = request.form['descricao']
 
-        cur = mysql.connection.cursor()
-        cur.execute("INSERT INTO contatos (email, assunto, descricao) VALUES (%s, %s, %s)", (email, assunto, descricao))
-        mysql.connection.commit()
-        cur.close()
+        # Executar a consulta SQL usando o cursor
+        cursor.execute("INSERT INTO contatos (email, assunto, descricao) VALUES (%s, %s, %s)", (email, assunto, descricao))
+        
+        # Commit para salvar as alterações no banco de dados
+        mysql.commit()
 
         return redirect('/users')
-    
+
     return render_template('contatos.html')
 
-
-
 if __name__ == '__main__':
-    app.run(debug=True) 
+    app.run(debug=True)

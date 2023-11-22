@@ -1,4 +1,7 @@
-/*create database contatos; */
+drop database if exists contatos;
+
+create database contatos; 
+
 use contatos;
 
 CREATE TABLE contatos(

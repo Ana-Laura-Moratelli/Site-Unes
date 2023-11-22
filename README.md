@@ -20,10 +20,10 @@ https://github.com/Ana-Laura-Moratelli/site-unes/assets/127795446/313bd7fd-43b4-
 </div>
 <h2>:hammer_and_wrench: Como executar</h2>
 
-  <h3>Passo 1: Certifique-se de ter o Git e o Python instalados.</h3>
+  <h3>Passo 1: Certifique-se de ter o Git, Python e MySQL instalados.</h3>
     <p>Para baixar o Git, acesse <a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a>.</p>
     <p>Para baixar o Python, acesse <a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a>.</p>
-
+    <p>Para baixar o MySQL, acesse <a href="https://dev.mysql.com/downloads/mysql/"</a>https://dev.mysql.com/downloads/mysql/.</p>
   <h3>Passo 2: Abra o Terminal</h3>
   <p>Pesquise por "Terminal" na barra de tarefas do seu dispositivo e abra o terminal.</p>
 
@@ -43,11 +43,27 @@ https://github.com/Ana-Laura-Moratelli/site-unes/assets/127795446/313bd7fd-43b4-
   <pre><code>source venv/bin/activate</code></pre>
   <pre><code>pip install -r requirements.txt</code></pre>
 
-  <h3>Passo 6: Execute a Aplicação</h3>
+  <h3>Passo 6: Configure o MySQL no Arquivo config.py</h3>
+<p>Abra o arquivo 'app.py'</p>
+<pre><code>db_config = {
+    'host': 'localhost',
+    'user': 'root',
+    'password': 'suasenha',
+    'database': 'contatos',
+}
+</code></pre>
+<p>Altere o valor da chave 'password' para a senha do seu MySQL.
+
+<h3>Passo 7: Importe o Banco de Dados</h3>
+<p>Execute o seguinte comando para importar o banco de dados:</p>
+<pre><code>mysql -u root -p < contatos.sql</code></pre>
+<p>Quando solicitado, insira a senha do usuário root do MySQL que você configurou durante a instalação e alterou no passo 8.</p>
+
+  <h3>Passo 8: Execute a Aplicação</h3>
   <pre><code>python app.py</code></pre>
 
-  <h3>Passo 7: Abra o Link no Navegador</h3>
+  <h3>Passo 9: Abra o Link no Navegador</h3>
   <p>Abrir o seguinte link em seu navegador de preferência: <a href="http://127.0.0.1:5000">http://127.0.0.1:5000</a></p>
 
-  <h3>Passo 8: Encerrando o Ambiente Virtual</h3>
+  <h3>Passo 10: Encerrando o Ambiente Virtual</h3>
   <pre><code>deactivate</code></pre>

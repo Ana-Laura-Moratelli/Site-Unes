@@ -43,8 +43,7 @@ https://github.com/Ana-Laura-Moratelli/site-unes/assets/127795446/313bd7fd-43b4-
   <pre><code>source venv/bin/activate</code></pre>
   <pre><code>pip install -r requirements.txt</code></pre>
 
-  <h3>Passo 6: Configure o MySQL no Arquivo config.py</h3>
-<p>Abra o arquivo 'app.py'</p>
+  <h3>Passo 6: Configure o MySQL no Arquivo app.py</h3>
 <pre><code>db_config = {
     'host': 'localhost',
     'user': 'root',

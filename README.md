@@ -6,7 +6,7 @@ Site fictício desenvolvido para estudo
 https://github.com/Ana-Laura-Moratelli/site-unes/assets/127795446/313bd7fd-43b4-41b5-88d2-4a940f284264
 
 
-<h2>:computer: Tecnologias utilizadas: </h2>
+<h2>💻 Tecnologias utilizadas: </h2>
 
 <div>
     <img src="https://img.shields.io/badge/HTML5-239120?style=for-the-badge&logo=html5&logoColor=white&color=045FB4" />
